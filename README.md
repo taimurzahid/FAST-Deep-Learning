@@ -1,5 +1,5 @@
 # FAST Deep Learning Workshops
-This Repository contains all the content which was either taught or is relevant to the Workshops conducted in the Fall 2018 Semester in FAST National University to the students of Deep Learning Course offered to the Masters of Science in Data Science program.
+This Repository contains all the content which was either taught or is relevant to the Workshops conducted in the Fall 2018 Semester in FAST National University to the students of CS 5102 - Deep Learning Course, taught by Dr. Muhammad Usman Sadiq, offered to the Masters of Science in Data Science program.
 
 # Announcements:
 1. The workshops are ungraded and, as of now, do not have any attendance.
