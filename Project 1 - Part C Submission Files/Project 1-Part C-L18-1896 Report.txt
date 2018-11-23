@@ -1,0 +1,16 @@
+
+
+Naeem Abbas   18l-1896
+
+BatchSize = 100
+classes = 2
+Epochs = 40
+Convulutional Layers 
+Conv 1 kernel size=(3,3)    filters=3
+Conv 2 kernel size=(3,3)    filters=2
+MaxPooling pool size=(2,2)  strides=(2,2)
+Conv 3 kernel size=(3,3)    filters=2
+Conv 4 kernel_size=(3,3)    filters=10
+MaxPooling pool size=(2,2)  strides=(2,2)
+Conv 5 kernel size=(2,2)    strides=(2,2)   filters=10
+Dropout 0.2
