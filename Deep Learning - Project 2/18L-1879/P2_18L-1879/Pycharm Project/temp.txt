@@ -1,0 +1,50 @@
+    for mfile in files:
+        file_path = os.path.abspath(os.path.join(folder_path, mfile))
+        file_data = np.array(cv.imread(file_path, cv.IMREAD_GRAYSCALE))
+        # file_data = file_data.reshape(64, 64, 1)
+        final_data.append(file_data)
+
+        if img_class == "cat":
+            file_label = np.array([0])
+        if img_class == "dog":
+            file_label = np.array([1])
+
+        final_labels.append(file_label)
+
+
+===============================================================================================================
+
+model = ModelOne()
+
+model.compile(loss=keras.losses.categorical_crossentropy,
+              optimizer=keras.optimizers.Adam(lr=.0001),
+              metrics=['accuracy'])
+
+history = model.fit(data, labels,
+                    batch_size=batch_size,
+                    epochs=epochs,
+                    verbose=1, shuffle=True, validation_split=0.1)
+
+==============================================================================================================
+
+# p.rotate(probability=0.6, max_left_rotation=20, max_right_rotation=20)
+# p.scale(probability=0.2, scale_factor=1.25)
+# p.flip_left_right(probability=0.5)
+# p.skew(probability=0.6)
+# p.shear(probability=0.33, max_shear_left=25, max_shear_right=25)
+p.crop_centre(probability=1, percentage_area=0.70)
+p.flip_top_bottom(probability=0.05)
+p.rotate(probability=0.85, max_left_rotation=25, max_right_rotation=25)
+# p.skew_tilt(probability=0.1, magnitude=0.25)
+p.flip_left_right(probability=0.85)
+
+p.crop_random(probability=0.5, percentage_area=0.90)
+
+p.resize(probability=1, width=256, height=256)
+
+==================================================================================================
+
+history = model.fit(train_data, train_labels,
+                    batch_size=batch_size,
+                    epochs=epochs,
+                    verbose=1, shuffle=True, validation_data=(test_data, test_labels))
