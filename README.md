@@ -9,7 +9,7 @@ This Repository contains all the content which was either taught or is relevant 
 5. The workshops will begin from 5:15 pm onwards irrespective of the day.
 6. The date of the workshop will be disclosed at most week before the workshop. But, as a rough idea, the workshops will be conducted either on Tuesday or Thursday.
 
-# Rubrics:
+# Rubrics for Project 1:
 
 ## Project 1 Part A [Total Marks: 10]
 
